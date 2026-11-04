@@ -21,4 +21,19 @@
     <data name="InvalidModelStateTitle" xml:space="preserve">
     <value>Ocurrieron uno o más errores de validación.</value>
   </data>
+  <data name="RequiredCategoryName" xml:space="preserve">
+    <value>El nombre de la categoría es obligatorio.</value>
+  </data>
+  <data name="CategoryNameTooLong" xml:space="preserve">
+    <value>El nombre de la categoría no puede tener más de 100 caracteres.</value>
+  </data>
+  <data name="CategoryNameDuplicated" xml:space="preserve">
+    <value>Ya existe una categoría con el mismo nombre.</value>
+  </data>
+  <data name="InvalidCategoryRequest" xml:space="preserve">
+    <value>La solicitud de categoría no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingCategory" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear la categoría.</value>
+  </data>
 </root>
