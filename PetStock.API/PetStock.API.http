@@ -1,6 +1,53 @@
-@PetStock.API_HostAddress = http://localhost:5238
+@baseUrl = http://localhost:5238
 
-GET {{PetStock.API_HostAddress}}/weatherforecast/
+### 1. Create a category (201)
+POST {{baseUrl}}/api/v1/categories
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "name": "Dog Food",
+  "description": "Dry and wet food for dogs"
+}
+
+### 2. Duplicate in English (409)
+POST {{baseUrl}}/api/v1/categories
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "name": "Dog Food",
+  "description": "Duplicated"
+}
+
+### 3. Duplicate in Spanish (409)
+POST {{baseUrl}}/api/v1/categories
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "name": "Dog Food",
+  "description": "Duplicado"
+}
+
+### 4. Missing name in Spanish (400)
+POST {{baseUrl}}/api/v1/categories
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "name": "",
+  "description": "Sin nombre"
+}
+
+### 5. Get all (200)
+GET {{baseUrl}}/api/v1/categories
 Accept: application/json
 
-###
+### 6. Get by id (200)
+GET {{baseUrl}}/api/v1/categories/1
+Accept: application/json
+
+### 7. Not found (404)
+GET {{baseUrl}}/api/v1/categories/999
+Accept: application/json

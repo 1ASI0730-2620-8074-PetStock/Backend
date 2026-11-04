@@ -2,6 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
+using PetStock.API.Catalog.Application.Internal.CommandServices;
+using PetStock.API.Catalog.Application.Internal.QueryServices;
+using PetStock.API.Catalog.Application.Services;
+using PetStock.API.Catalog.Domain.Repositories;
+using PetStock.API.Catalog.Infrastructure.Persistence.EFC.Repositories;
 using PetStock.API.Resources;
 using PetStock.API.Shared.Domain.Repositories;
 using PetStock.API.Shared.Infrastructure.Interfaces.ASP.Configuration;
@@ -92,6 +97,11 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Bounded contexts dependency injection
 // (each bounded context adds its repositories and services here)
+
+// Catalog
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryCommandService, CategoryCommandService>();
+builder.Services.AddScoped<ICategoryQueryService, CategoryQueryService>();
 
 var app = builder.Build();
 
