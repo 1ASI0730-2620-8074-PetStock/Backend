@@ -42,6 +42,55 @@
   <!-- Profiles -->
 
   <!-- Catalog -->
+  <!-- Catalog -->
+
+  <data name="RequiredSupplierCompanyName" xml:space="preserve">
+    <value>The supplier company name is required.</value>
+  </data>
+  <data name="SupplierCompanyNameTooLong" xml:space="preserve">
+    <value>The supplier company name cannot be longer than 150 characters.</value>
+  </data>
+  <data name="SupplierFieldTooLong" xml:space="preserve">
+    <value>One of the supplier fields is too long.</value>
+  </data>
+  <data name="InvalidSupplierRequest" xml:space="preserve">
+    <value>The supplier request is invalid.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingSupplier" xml:space="preserve">
+    <value>An unexpected error occurred while creating the supplier.</value>
+  </data>
+  <data name="RequiredProductName" xml:space="preserve">
+    <value>The product name is required.</value>
+  </data>
+  <data name="ProductNameTooLong" xml:space="preserve">
+    <value>The product name cannot be longer than 150 characters.</value>
+  </data>
+  <data name="ProductDescriptionTooLong" xml:space="preserve">
+    <value>The product description cannot be longer than 255 characters.</value>
+  </data>
+  <data name="InvalidProductPrice" xml:space="preserve">
+    <value>The product price must be greater than zero.</value>
+  </data>
+  <data name="InvalidProductCategoryId" xml:space="preserve">
+    <value>The product category id must be greater than zero.</value>
+  </data>
+  <data name="InvalidProductSupplierId" xml:space="preserve">
+    <value>The product supplier id must be greater than zero.</value>
+  </data>
+  <data name="ProductCategoryNotFound" xml:space="preserve">
+    <value>The category of the product does not exist.</value>
+  </data>
+  <data name="ProductSupplierNotFound" xml:space="preserve">
+    <value>The supplier of the product does not exist.</value>
+  </data>
+  <data name="InvalidProductRequest" xml:space="preserve">
+    <value>The product request is invalid.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingProduct" xml:space="preserve">
+    <value>An unexpected error occurred while creating the product.</value>
+  </data>
+
+  <!-- Inventory -->
 
   <!-- Inventory -->
 

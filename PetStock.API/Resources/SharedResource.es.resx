@@ -42,6 +42,55 @@
   <!-- Profiles -->
 
   <!-- Catalog -->
+  <!-- Catalog -->
+
+  <data name="RequiredSupplierCompanyName" xml:space="preserve">
+    <value>El nombre de la empresa del proveedor es obligatorio.</value>
+  </data>
+  <data name="SupplierCompanyNameTooLong" xml:space="preserve">
+    <value>El nombre de la empresa del proveedor no puede tener más de 150 caracteres.</value>
+  </data>
+  <data name="SupplierFieldTooLong" xml:space="preserve">
+    <value>Uno de los campos del proveedor es demasiado largo.</value>
+  </data>
+  <data name="InvalidSupplierRequest" xml:space="preserve">
+    <value>La solicitud de proveedor no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingSupplier" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear el proveedor.</value>
+  </data>
+  <data name="RequiredProductName" xml:space="preserve">
+    <value>El nombre del producto es obligatorio.</value>
+  </data>
+  <data name="ProductNameTooLong" xml:space="preserve">
+    <value>El nombre del producto no puede tener más de 150 caracteres.</value>
+  </data>
+  <data name="ProductDescriptionTooLong" xml:space="preserve">
+    <value>La descripción del producto no puede tener más de 255 caracteres.</value>
+  </data>
+  <data name="InvalidProductPrice" xml:space="preserve">
+    <value>El precio del producto debe ser mayor que cero.</value>
+  </data>
+  <data name="InvalidProductCategoryId" xml:space="preserve">
+    <value>El id de la categoría del producto debe ser mayor que cero.</value>
+  </data>
+  <data name="InvalidProductSupplierId" xml:space="preserve">
+    <value>El id del proveedor del producto debe ser mayor que cero.</value>
+  </data>
+  <data name="ProductCategoryNotFound" xml:space="preserve">
+    <value>La categoría del producto no existe.</value>
+  </data>
+  <data name="ProductSupplierNotFound" xml:space="preserve">
+    <value>El proveedor del producto no existe.</value>
+  </data>
+  <data name="InvalidProductRequest" xml:space="preserve">
+    <value>La solicitud de producto no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingProduct" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear el producto.</value>
+  </data>
+
+  <!-- Inventory -->
 
   <!-- Inventory -->
 
