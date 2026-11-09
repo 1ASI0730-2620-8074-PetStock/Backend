@@ -41,7 +41,7 @@
 
   <!-- Profiles -->
 
-  <!-- Catalog -->
+
   <!-- Catalog -->
 
   <data name="RequiredSupplierCompanyName" xml:space="preserve">
@@ -90,9 +90,44 @@
     <value>Ocurrió un error inesperado al crear el producto.</value>
   </data>
 
-  <!-- Inventory -->
 
   <!-- Inventory -->
+  <data name="InvalidProductStockProductId" xml:space="preserve">
+    <value>The product id of the stock must be greater than zero.</value>
+  </data>
+  <data name="InvalidProductStockQuantity" xml:space="preserve">
+    <value>Stock quantities cannot be negative.</value>
+  </data>
+  <data name="ProductStockDuplicated" xml:space="preserve">
+    <value>The stock of this product is already registered.</value>
+  </data>
+  <data name="ProductStockNotFound" xml:space="preserve">
+    <value>The product stock was not found.</value>
+  </data>
+  <data name="InvalidProductStockRequest" xml:space="preserve">
+    <value>The product stock request is invalid.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingProductStock" xml:space="preserve">
+    <value>An unexpected error occurred while registering the product stock.</value>
+  </data>
+  <data name="UnexpectedErrorUpdatingProductStock" xml:space="preserve">
+    <value>An unexpected error occurred while updating the product stock.</value>
+  </data>
+  <data name="InvalidStockAlertProductId" xml:space="preserve">
+    <value>The product id of the alert must be greater than zero.</value>
+  </data>
+  <data name="RequiredStockAlertLevel" xml:space="preserve">
+    <value>The alert level is required.</value>
+  </data>
+  <data name="InvalidStockAlertLevel" xml:space="preserve">
+    <value>The alert level must be low or critical.</value>
+  </data>
+  <data name="InvalidStockAlertRequest" xml:space="preserve">
+    <value>The stock alert request is invalid.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingStockAlert" xml:space="preserve">
+    <value>An unexpected error occurred while creating the stock alert.</value>
+  </data>
 
   <!-- Sales -->
 
