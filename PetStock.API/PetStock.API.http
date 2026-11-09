@@ -1,5 +1,11 @@
 @baseUrl = http://localhost:5238
 
+### ===== IAM =====
+
+### ===== Profiles =====
+
+### ===== Catalog =====
+
 ### 1. Create a category (201)
 POST {{baseUrl}}/api/v1/categories
 Content-Type: application/json
@@ -51,3 +57,15 @@ Accept: application/json
 ### 7. Not found (404)
 GET {{baseUrl}}/api/v1/categories/999
 Accept: application/json
+
+### ===== Inventory =====
+
+### ===== Sales =====
+
+### ===== Customers =====
+
+### ===== Purchasing =====
+
+### ===== Cash Shifts =====
+
+### ===== Analytics =====
