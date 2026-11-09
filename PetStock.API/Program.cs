@@ -96,12 +96,28 @@ builder.Services.AddDbContext<AppDbContext>((serviceProvider, options) =>
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 // Bounded contexts dependency injection
-// (each bounded context adds its repositories and services here)
+// (each bounded context adds its repositories and services under its own comment)
+
+// IAM
+
+// Profiles
 
 // Catalog
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryCommandService, CategoryCommandService>();
 builder.Services.AddScoped<ICategoryQueryService, CategoryQueryService>();
+
+// Inventory
+
+// Sales
+
+// Customers
+
+// Purchasing
+
+// Cash Shifts
+
+// Analytics
 
 var app = builder.Build();
 
