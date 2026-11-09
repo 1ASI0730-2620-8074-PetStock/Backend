@@ -36,4 +36,23 @@
   <data name="UnexpectedErrorCreatingCategory" xml:space="preserve">
     <value>An unexpected error occurred while creating the category.</value>
   </data>
+
+  <!-- IAM -->
+
+  <!-- Profiles -->
+
+  <!-- Catalog -->
+
+  <!-- Inventory -->
+
+  <!-- Sales -->
+
+  <!-- Customers -->
+
+  <!-- Purchasing -->
+
+  <!-- Cash Shifts -->
+
+  <!-- Analytics -->
+
 </root>
