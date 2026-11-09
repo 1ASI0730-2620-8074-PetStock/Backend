@@ -48,4 +48,15 @@ public partial class ProductStock
     {
         CurrentStock += quantity;
     }
+
+    /// <summary>Replaces the current and minimum stock. Quantities cannot be negative.</summary>
+    public void UpdateStock(UpdateProductStockCommand command)
+    {
+        ArgumentNullException.ThrowIfNull(command);
+        if (command.CurrentStock < 0 || command.MinimumStock < 0)
+            throw new ArgumentException("Stock quantities cannot be negative.", nameof(command));
+
+        CurrentStock = command.CurrentStock;
+        MinimumStock = command.MinimumStock;
+    }
 }

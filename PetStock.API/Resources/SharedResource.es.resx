@@ -41,9 +41,93 @@
 
   <!-- Profiles -->
 
+
   <!-- Catalog -->
 
+  <data name="RequiredSupplierCompanyName" xml:space="preserve">
+    <value>El nombre de la empresa del proveedor es obligatorio.</value>
+  </data>
+  <data name="SupplierCompanyNameTooLong" xml:space="preserve">
+    <value>El nombre de la empresa del proveedor no puede tener más de 150 caracteres.</value>
+  </data>
+  <data name="SupplierFieldTooLong" xml:space="preserve">
+    <value>Uno de los campos del proveedor es demasiado largo.</value>
+  </data>
+  <data name="InvalidSupplierRequest" xml:space="preserve">
+    <value>La solicitud de proveedor no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingSupplier" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear el proveedor.</value>
+  </data>
+  <data name="RequiredProductName" xml:space="preserve">
+    <value>El nombre del producto es obligatorio.</value>
+  </data>
+  <data name="ProductNameTooLong" xml:space="preserve">
+    <value>El nombre del producto no puede tener más de 150 caracteres.</value>
+  </data>
+  <data name="ProductDescriptionTooLong" xml:space="preserve">
+    <value>La descripción del producto no puede tener más de 255 caracteres.</value>
+  </data>
+  <data name="InvalidProductPrice" xml:space="preserve">
+    <value>El precio del producto debe ser mayor que cero.</value>
+  </data>
+  <data name="InvalidProductCategoryId" xml:space="preserve">
+    <value>El id de la categoría del producto debe ser mayor que cero.</value>
+  </data>
+  <data name="InvalidProductSupplierId" xml:space="preserve">
+    <value>El id del proveedor del producto debe ser mayor que cero.</value>
+  </data>
+  <data name="ProductCategoryNotFound" xml:space="preserve">
+    <value>La categoría del producto no existe.</value>
+  </data>
+  <data name="ProductSupplierNotFound" xml:space="preserve">
+    <value>El proveedor del producto no existe.</value>
+  </data>
+  <data name="InvalidProductRequest" xml:space="preserve">
+    <value>La solicitud de producto no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingProduct" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear el producto.</value>
+  </data>
+
+
   <!-- Inventory -->
+   <data name="InvalidProductStockProductId" xml:space="preserve">
+    <value>El id del producto del inventario debe ser mayor que cero.</value>
+  </data>
+  <data name="InvalidProductStockQuantity" xml:space="preserve">
+    <value>Las cantidades de stock no pueden ser negativas.</value>
+  </data>
+  <data name="ProductStockDuplicated" xml:space="preserve">
+    <value>El stock de este producto ya está registrado.</value>
+  </data>
+  <data name="ProductStockNotFound" xml:space="preserve">
+    <value>No se encontró el stock del producto.</value>
+  </data>
+  <data name="InvalidProductStockRequest" xml:space="preserve">
+    <value>La solicitud de stock del producto no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingProductStock" xml:space="preserve">
+    <value>Ocurrió un error inesperado al registrar el stock del producto.</value>
+  </data>
+  <data name="UnexpectedErrorUpdatingProductStock" xml:space="preserve">
+    <value>Ocurrió un error inesperado al actualizar el stock del producto.</value>
+  </data>
+  <data name="InvalidStockAlertProductId" xml:space="preserve">
+    <value>El id del producto de la alerta debe ser mayor que cero.</value>
+  </data>
+  <data name="RequiredStockAlertLevel" xml:space="preserve">
+    <value>El nivel de la alerta es obligatorio.</value>
+  </data>
+  <data name="InvalidStockAlertLevel" xml:space="preserve">
+    <value>El nivel de la alerta debe ser low o critical.</value>
+  </data>
+  <data name="InvalidStockAlertRequest" xml:space="preserve">
+    <value>La solicitud de alerta de stock no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingStockAlert" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear la alerta de stock.</value>
+  </data>
 
   <!-- Sales -->
 

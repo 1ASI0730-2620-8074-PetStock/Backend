@@ -11,12 +11,15 @@ public partial class StockAlert
         AlertLevel = string.Empty;
     }
 
-    /// <summary>Creates an active alert from the command.</summary>
+    /// <summary>Creates an active alert from the command. The level cannot be empty.</summary>
     public StockAlert(CreateStockAlertCommand command)
     {
         ArgumentNullException.ThrowIfNull(command);
+        if (string.IsNullOrWhiteSpace(command.AlertLevel))
+            throw new ArgumentException("Alert level cannot be empty.", nameof(command));
+
         ProductId = command.ProductId;
-        AlertLevel = command.AlertLevel;
+        AlertLevel = command.AlertLevel.Trim();
         IsActive = true;
     }
 

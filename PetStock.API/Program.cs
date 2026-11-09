@@ -13,7 +13,11 @@ using PetStock.API.Shared.Infrastructure.Interfaces.ASP.Configuration;
 using PetStock.API.Shared.Infrastructure.Persistence.EFC.Configuration;
 using PetStock.API.Shared.Infrastructure.Persistence.EFC.Repositories;
 using Scalar.AspNetCore;
-
+using PetStock.API.Inventory.Application.Internal.CommandServices;
+using PetStock.API.Inventory.Application.Internal.QueryServices;
+using PetStock.API.Inventory.Application.Services;
+using PetStock.API.Inventory.Domain.Repositories;
+using PetStock.API.Inventory.Infrastructure.Persistence.EFC.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Lower case URLs
@@ -106,9 +110,19 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryCommandService, CategoryCommandService>();
 builder.Services.AddScoped<ICategoryQueryService, CategoryQueryService>();
-
+builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
+builder.Services.AddScoped<ISupplierCommandService, SupplierCommandService>();
+builder.Services.AddScoped<ISupplierQueryService, SupplierQueryService>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductCommandService, ProductCommandService>();
+builder.Services.AddScoped<IProductQueryService, ProductQueryService>();
 // Inventory
-
+builder.Services.AddScoped<IProductStockRepository, ProductStockRepository>();
+builder.Services.AddScoped<IProductStockCommandService, ProductStockCommandService>();
+builder.Services.AddScoped<IProductStockQueryService, ProductStockQueryService>();
+builder.Services.AddScoped<IStockAlertRepository, StockAlertRepository>();
+builder.Services.AddScoped<IStockAlertCommandService, StockAlertCommandService>();
+builder.Services.AddScoped<IStockAlertQueryService, StockAlertQueryService>();
 // Sales
 
 // Customers

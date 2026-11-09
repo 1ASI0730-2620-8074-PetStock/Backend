@@ -15,13 +15,17 @@ public partial class Supplier
     }
 
     /// <summary>Creates a supplier from the command.</summary>
+    /// <summary>Creates a supplier from the command. The company name cannot be empty.</summary>
     public Supplier(CreateSupplierCommand command)
     {
         ArgumentNullException.ThrowIfNull(command);
-        CompanyName = command.CompanyName;
-        ContactName = command.ContactName;
-        Phone = command.Phone;
-        Email = command.Email;
+        if (string.IsNullOrWhiteSpace(command.CompanyName))
+            throw new ArgumentException("Supplier company name cannot be empty.", nameof(command));
+
+        CompanyName = command.CompanyName.Trim();
+        ContactName = command.ContactName.Trim();
+        Phone = command.Phone.Trim();
+        Email = command.Email.Trim();
     }
 
     public int Id { get; private set; }

@@ -5,7 +5,100 @@
 ### ===== Profiles =====
 
 ### ===== Catalog =====
+### Create a supplier (201)
+POST {{baseUrl}}/api/v1/suppliers
+Content-Type: application/json
+Accept-Language: en
 
+{
+  "companyName": "Distribuidora PetFood S.A.C.",
+  "contactName": "Luis Paredes",
+  "phone": "+51911223344",
+  "email": "contacto@petfood.pe"
+}
+
+### Supplier without company name in Spanish (400)
+POST {{baseUrl}}/api/v1/suppliers
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "companyName": "",
+  "contactName": "Sin empresa"
+}
+
+### Get all suppliers (200)
+GET {{baseUrl}}/api/v1/suppliers
+Accept: application/json
+
+### Get supplier by id (200)
+GET {{baseUrl}}/api/v1/suppliers/1
+Accept: application/json
+
+### Supplier not found (404)
+GET {{baseUrl}}/api/v1/suppliers/999
+Accept: application/json
+
+### Create a product (201)
+POST {{baseUrl}}/api/v1/products
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "name": "Ricocan Adulto 15kg",
+  "description": "Dry food with beef flavor",
+  "price": 120.00,
+  "categoryId": 1,
+  "supplierId": 1
+}
+
+### Product with a negative price in Spanish (400)
+POST {{baseUrl}}/api/v1/products
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "name": "Producto inválido",
+  "price": -5,
+  "categoryId": 1,
+  "supplierId": 1
+}
+
+### Product with a category that does not exist (400)
+POST {{baseUrl}}/api/v1/products
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "name": "Cat Toy",
+  "price": 15.50,
+  "categoryId": 999,
+  "supplierId": 1
+}
+
+### Product with a supplier that does not exist in Spanish (400)
+POST {{baseUrl}}/api/v1/products
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "name": "Juguete para gato",
+  "price": 15.50,
+  "categoryId": 1,
+  "supplierId": 999
+}
+
+### Get all products (200)
+GET {{baseUrl}}/api/v1/products
+Accept: application/json
+
+### Get product by id (200)
+GET {{baseUrl}}/api/v1/products/1
+Accept: application/json
+
+### Product not found (404)
+GET {{baseUrl}}/api/v1/products/999
+Accept: application/json
 ### 1. Create a category (201)
 POST {{baseUrl}}/api/v1/categories
 Content-Type: application/json
@@ -59,7 +152,123 @@ GET {{baseUrl}}/api/v1/categories/999
 Accept: application/json
 
 ### ===== Inventory =====
+### Create the stock of product 1 (201)
+POST {{baseUrl}}/api/v1/inventories
+Content-Type: application/json
+Accept-Language: en
 
+{
+  "productId": 1,
+  "currentStock": 25,
+  "minimumStock": 5
+}
+
+### Duplicate stock of product 1 (409)
+POST {{baseUrl}}/api/v1/inventories
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "productId": 1,
+  "currentStock": 10,
+  "minimumStock": 2
+}
+
+### Duplicate stock of product 1 in Spanish (409)
+POST {{baseUrl}}/api/v1/inventories
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "productId": 1,
+  "currentStock": 10,
+  "minimumStock": 2
+}
+
+### Negative stock in Spanish (400)
+POST {{baseUrl}}/api/v1/inventories
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "productId": 2,
+  "currentStock": -1,
+  "minimumStock": 5
+}
+
+### Get all inventories (200)
+GET {{baseUrl}}/api/v1/inventories
+Accept: application/json
+
+### Get inventory by id (200)
+GET {{baseUrl}}/api/v1/inventories/1
+Accept: application/json
+
+### Inventory not found (404)
+GET {{baseUrl}}/api/v1/inventories/999
+Accept: application/json
+
+### Update the stock of inventory 1 (200)
+PUT {{baseUrl}}/api/v1/inventories/1
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "currentStock": 30,
+  "minimumStock": 8
+}
+
+### Update an inventory that does not exist in Spanish (404)
+PUT {{baseUrl}}/api/v1/inventories/999
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "currentStock": 30,
+  "minimumStock": 8
+}
+
+### Update with a negative minimum in Spanish (400)
+PUT {{baseUrl}}/api/v1/inventories/1
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "currentStock": 30,
+  "minimumStock": -3
+}
+
+### Create a stock alert (201)
+POST {{baseUrl}}/api/v1/stock-alerts
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "productId": 1,
+  "level": "critical"
+}
+
+### Stock alert with an invalid level in Spanish (400)
+POST {{baseUrl}}/api/v1/stock-alerts
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "productId": 1,
+  "level": "urgent"
+}
+
+### Get all stock alerts (200)
+GET {{baseUrl}}/api/v1/stock-alerts
+Accept: application/json
+
+### Get stock alert by id (200)
+GET {{baseUrl}}/api/v1/stock-alerts/1
+Accept: application/json
+
+### Stock alert not found (404)
+GET {{baseUrl}}/api/v1/stock-alerts/999
+Accept: application/json
 ### ===== Sales =====
 
 ### ===== Customers =====
