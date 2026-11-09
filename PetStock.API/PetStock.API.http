@@ -5,7 +5,100 @@
 ### ===== Profiles =====
 
 ### ===== Catalog =====
+### Create a supplier (201)
+POST {{baseUrl}}/api/v1/suppliers
+Content-Type: application/json
+Accept-Language: en
 
+{
+  "companyName": "Distribuidora PetFood S.A.C.",
+  "contactName": "Luis Paredes",
+  "phone": "+51911223344",
+  "email": "contacto@petfood.pe"
+}
+
+### Supplier without company name in Spanish (400)
+POST {{baseUrl}}/api/v1/suppliers
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "companyName": "",
+  "contactName": "Sin empresa"
+}
+
+### Get all suppliers (200)
+GET {{baseUrl}}/api/v1/suppliers
+Accept: application/json
+
+### Get supplier by id (200)
+GET {{baseUrl}}/api/v1/suppliers/1
+Accept: application/json
+
+### Supplier not found (404)
+GET {{baseUrl}}/api/v1/suppliers/999
+Accept: application/json
+
+### Create a product (201)
+POST {{baseUrl}}/api/v1/products
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "name": "Ricocan Adulto 15kg",
+  "description": "Dry food with beef flavor",
+  "price": 120.00,
+  "categoryId": 1,
+  "supplierId": 1
+}
+
+### Product with a negative price in Spanish (400)
+POST {{baseUrl}}/api/v1/products
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "name": "Producto inválido",
+  "price": -5,
+  "categoryId": 1,
+  "supplierId": 1
+}
+
+### Product with a category that does not exist (400)
+POST {{baseUrl}}/api/v1/products
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "name": "Cat Toy",
+  "price": 15.50,
+  "categoryId": 999,
+  "supplierId": 1
+}
+
+### Product with a supplier that does not exist in Spanish (400)
+POST {{baseUrl}}/api/v1/products
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "name": "Juguete para gato",
+  "price": 15.50,
+  "categoryId": 1,
+  "supplierId": 999
+}
+
+### Get all products (200)
+GET {{baseUrl}}/api/v1/products
+Accept: application/json
+
+### Get product by id (200)
+GET {{baseUrl}}/api/v1/products/1
+Accept: application/json
+
+### Product not found (404)
+GET {{baseUrl}}/api/v1/products/999
+Accept: application/json
 ### 1. Create a category (201)
 POST {{baseUrl}}/api/v1/categories
 Content-Type: application/json
