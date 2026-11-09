@@ -92,41 +92,41 @@
 
 
   <!-- Inventory -->
-  <data name="InvalidProductStockProductId" xml:space="preserve">
-    <value>The product id of the stock must be greater than zero.</value>
+   <data name="InvalidProductStockProductId" xml:space="preserve">
+    <value>El id del producto del inventario debe ser mayor que cero.</value>
   </data>
   <data name="InvalidProductStockQuantity" xml:space="preserve">
-    <value>Stock quantities cannot be negative.</value>
+    <value>Las cantidades de stock no pueden ser negativas.</value>
   </data>
   <data name="ProductStockDuplicated" xml:space="preserve">
-    <value>The stock of this product is already registered.</value>
+    <value>El stock de este producto ya está registrado.</value>
   </data>
   <data name="ProductStockNotFound" xml:space="preserve">
-    <value>The product stock was not found.</value>
+    <value>No se encontró el stock del producto.</value>
   </data>
   <data name="InvalidProductStockRequest" xml:space="preserve">
-    <value>The product stock request is invalid.</value>
+    <value>La solicitud de stock del producto no es válida.</value>
   </data>
   <data name="UnexpectedErrorCreatingProductStock" xml:space="preserve">
-    <value>An unexpected error occurred while registering the product stock.</value>
+    <value>Ocurrió un error inesperado al registrar el stock del producto.</value>
   </data>
   <data name="UnexpectedErrorUpdatingProductStock" xml:space="preserve">
-    <value>An unexpected error occurred while updating the product stock.</value>
+    <value>Ocurrió un error inesperado al actualizar el stock del producto.</value>
   </data>
   <data name="InvalidStockAlertProductId" xml:space="preserve">
-    <value>The product id of the alert must be greater than zero.</value>
+    <value>El id del producto de la alerta debe ser mayor que cero.</value>
   </data>
   <data name="RequiredStockAlertLevel" xml:space="preserve">
-    <value>The alert level is required.</value>
+    <value>El nivel de la alerta es obligatorio.</value>
   </data>
   <data name="InvalidStockAlertLevel" xml:space="preserve">
-    <value>The alert level must be low or critical.</value>
+    <value>El nivel de la alerta debe ser low o critical.</value>
   </data>
   <data name="InvalidStockAlertRequest" xml:space="preserve">
-    <value>The stock alert request is invalid.</value>
+    <value>La solicitud de alerta de stock no es válida.</value>
   </data>
   <data name="UnexpectedErrorCreatingStockAlert" xml:space="preserve">
-    <value>An unexpected error occurred while creating the stock alert.</value>
+    <value>Ocurrió un error inesperado al crear la alerta de stock.</value>
   </data>
 
   <!-- Sales -->
