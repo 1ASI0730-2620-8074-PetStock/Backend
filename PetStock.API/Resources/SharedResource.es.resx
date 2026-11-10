@@ -101,6 +101,24 @@
 
 
   <!-- Profiles -->
+  <data name="InvalidPreferenceUserId" xml:space="preserve">
+    <value>El id del usuario debe ser mayor que cero.</value>
+  </data>
+  <data name="RequiredPreferenceLanguage" xml:space="preserve">
+    <value>El idioma es obligatorio.</value>
+  </data>
+  <data name="InvalidPreferenceLanguage" xml:space="preserve">
+    <value>El idioma debe ser en o es.</value>
+  </data>
+  <data name="UserPreferenceDuplicated" xml:space="preserve">
+    <value>Este usuario ya tiene preferencias.</value>
+  </data>
+  <data name="UserPreferenceNotFound" xml:space="preserve">
+    <value>No se encontraron las preferencias.</value>
+  </data>
+  <data name="UnexpectedErrorSavingUserPreference" xml:space="preserve">
+    <value>Ocurrió un error inesperado al guardar las preferencias.</value>
+  </data>
 
 
   <!-- Catalog -->
