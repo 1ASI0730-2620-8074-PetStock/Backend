@@ -193,6 +193,72 @@ Accept: application/json
 
 ### ===== Profiles =====
 
+### P1. Create preferences (201)
+POST {{baseUrl}}/api/v1/preferences
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "userId": 1,
+  "notificationsEnabled": true,
+  "darkMode": false,
+  "language": "es"
+}
+
+### P2. Duplicate for the same user in Spanish (409)
+POST {{baseUrl}}/api/v1/preferences
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "userId": 1,
+  "notificationsEnabled": false,
+  "darkMode": true,
+  "language": "en"
+}
+
+### P3. Invalid language in Spanish (400)
+POST {{baseUrl}}/api/v1/preferences
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "userId": 2,
+  "notificationsEnabled": true,
+  "darkMode": false,
+  "language": "fr"
+}
+
+### P4. Get all (200)
+GET {{baseUrl}}/api/v1/preferences
+Accept: application/json
+
+### P5. Get by id (200)
+GET {{baseUrl}}/api/v1/preferences/1
+Accept: application/json
+
+### P6. Update (200)
+PUT {{baseUrl}}/api/v1/preferences/1
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "notificationsEnabled": false,
+  "darkMode": true,
+  "language": "en"
+}
+
+### P7. Update not found in Spanish (404)
+PUT {{baseUrl}}/api/v1/preferences/999
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "notificationsEnabled": false,
+  "darkMode": true,
+  "language": "en"
+}
+
 ### ===== Catalog =====
 ### Create a supplier (201)
 POST {{baseUrl}}/api/v1/suppliers
