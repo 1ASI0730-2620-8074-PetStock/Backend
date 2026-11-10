@@ -196,6 +196,46 @@
   <!-- Purchasing -->
 
   <!-- Cash Shifts -->
+  <data name="CashShiftUserIdRequired" xml:space="preserve">
+    <value>A valid user id is required to open a cash shift.</value>
+  </data>
+  <data name="CashShiftOpeningAmountInvalid" xml:space="preserve">
+    <value>The opening amount must be zero or greater.</value>
+  </data>
+  <data name="CashShiftClosingAmountInvalid" xml:space="preserve">
+    <value>The closing amount must be zero or greater.</value>
+  </data>
+  <data name="CashShiftAlreadyOpen" xml:space="preserve">
+    <value>The user already has an open cash shift.</value>
+  </data>
+  <data name="CashShiftAlreadyClosed" xml:space="preserve">
+    <value>The cash shift is already closed.</value>
+  </data>
+  <data name="CashShiftNotFound" xml:space="preserve">
+    <value>The cash shift was not found.</value>
+  </data>
+  <data name="CashShiftRequestInvalid" xml:space="preserve">
+    <value>The cash shift request is invalid.</value>
+  </data>
+  <data name="UnexpectedErrorOpeningCashShift" xml:space="preserve">
+    <value>An unexpected error occurred while opening the cash shift.</value>
+  </data>
+  <data name="UnexpectedErrorClosingCashShift" xml:space="preserve">
+    <value>An unexpected error occurred while closing the cash shift.</value>
+  </data>
+  <data name="CashReconciliationCashShiftIdRequired" xml:space="preserve">
+    <value>A valid cash shift id is required.</value>
+  </data>
+  <data name="CashReconciliationAmountInvalid" xml:space="preserve">
+    <value>The amounts must be zero or greater.</value>
+  </data>
+  <data name="CashReconciliationDuplicated" xml:space="preserve">
+    <value>The cash shift already has a reconciliation.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingCashReconciliation" xml:space="preserve">
+    <value>An unexpected error occurred while creating the cash reconciliation.</value>
+  </data>
+
 
   <!-- Analytics -->
 

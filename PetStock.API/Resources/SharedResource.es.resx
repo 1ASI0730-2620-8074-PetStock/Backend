@@ -197,6 +197,46 @@
   <!-- Purchasing -->
 
   <!-- Cash Shifts -->
+  <data name="CashShiftUserIdRequired" xml:space="preserve">
+    <value>Se requiere un id de usuario válido para abrir un turno de caja.</value>
+  </data>
+  <data name="CashShiftOpeningAmountInvalid" xml:space="preserve">
+    <value>El monto de apertura debe ser cero o mayor.</value>
+  </data>
+  <data name="CashShiftClosingAmountInvalid" xml:space="preserve">
+    <value>El monto de cierre debe ser cero o mayor.</value>
+  </data>
+  <data name="CashShiftAlreadyOpen" xml:space="preserve">
+    <value>El usuario ya tiene un turno de caja abierto.</value>
+  </data>
+  <data name="CashShiftAlreadyClosed" xml:space="preserve">
+    <value>El turno de caja ya está cerrado.</value>
+  </data>
+  <data name="CashShiftNotFound" xml:space="preserve">
+    <value>No se encontró el turno de caja.</value>
+  </data>
+  <data name="CashShiftRequestInvalid" xml:space="preserve">
+    <value>La solicitud del turno de caja no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorOpeningCashShift" xml:space="preserve">
+    <value>Ocurrió un error inesperado al abrir el turno de caja.</value>
+  </data>
+  <data name="UnexpectedErrorClosingCashShift" xml:space="preserve">
+    <value>Ocurrió un error inesperado al cerrar el turno de caja.</value>
+  </data>
+  <data name="CashReconciliationCashShiftIdRequired" xml:space="preserve">
+    <value>Se requiere un id de turno de caja válido.</value>
+  </data>
+  <data name="CashReconciliationAmountInvalid" xml:space="preserve">
+    <value>Los montos deben ser cero o mayores.</value>
+  </data>
+  <data name="CashReconciliationDuplicated" xml:space="preserve">
+    <value>El turno de caja ya tiene un cuadre registrado.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingCashReconciliation" xml:space="preserve">
+    <value>Ocurrió un error inesperado al registrar el cuadre de caja.</value>
+  </data>
+
 
   <!-- Analytics -->
 
