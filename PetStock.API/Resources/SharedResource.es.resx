@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
     <resheader name="resmimetype">
         <value>text/microsoft-resx</value>
@@ -38,6 +38,67 @@
   </data>
 
   <!-- IAM -->
+  <data name="UserFirstNameRequired" xml:space="preserve">
+    <value>El nombre es obligatorio.</value>
+  </data>
+  <data name="UserFirstNameTooLong" xml:space="preserve">
+    <value>El nombre no puede tener más de 100 caracteres.</value>
+  </data>
+  <data name="UserLastNameRequired" xml:space="preserve">
+    <value>El apellido es obligatorio.</value>
+  </data>
+  <data name="UserLastNameTooLong" xml:space="preserve">
+    <value>El apellido no puede tener más de 100 caracteres.</value>
+  </data>
+  <data name="UserEmailRequired" xml:space="preserve">
+    <value>El correo electrónico es obligatorio.</value>
+  </data>
+  <data name="UserEmailInvalid" xml:space="preserve">
+    <value>El formato del correo electrónico no es válido.</value>
+  </data>
+  <data name="UserEmailTooLong" xml:space="preserve">
+    <value>El correo electrónico no puede tener más de 200 caracteres.</value>
+  </data>
+  <data name="UserPasswordRequired" xml:space="preserve">
+    <value>La contraseña es obligatoria.</value>
+  </data>
+  <data name="UserPasswordTooShort" xml:space="preserve">
+    <value>La contraseña debe tener al menos 6 caracteres.</value>
+  </data>
+  <data name="UserPhoneTooLong" xml:space="preserve">
+    <value>El teléfono no puede tener más de 20 caracteres.</value>
+  </data>
+  <data name="UserRoleTooLong" xml:space="preserve">
+    <value>El rol no puede tener más de 40 caracteres.</value>
+  </data>
+  <data name="UserEmailDuplicated" xml:space="preserve">
+    <value>Ya existe un usuario con el mismo correo electrónico.</value>
+  </data>
+  <data name="UserRequestInvalid" xml:space="preserve">
+    <value>La solicitud de usuario no es válida.</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>No se encontró el usuario.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingUser" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear el usuario.</value>
+  </data>
+  <data name="UnexpectedErrorUpdatingUser" xml:space="preserve">
+    <value>Ocurrió un error inesperado al actualizar el usuario.</value>
+  </data>
+  <data name="SessionEmailRequired" xml:space="preserve">
+    <value>El correo electrónico es obligatorio para iniciar sesión.</value>
+  </data>
+  <data name="SessionPasswordRequired" xml:space="preserve">
+    <value>La contraseña es obligatoria para iniciar sesión.</value>
+  </data>
+  <data name="SessionInvalidCredentials" xml:space="preserve">
+    <value>El correo electrónico o la contraseña son incorrectos.</value>
+  </data>
+  <data name="UnexpectedErrorSigningIn" xml:space="preserve">
+    <value>Ocurrió un error inesperado al iniciar sesión.</value>
+  </data>
+
 
   <!-- Profiles -->
 

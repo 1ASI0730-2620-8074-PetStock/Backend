@@ -38,6 +38,66 @@
   </data>
 
   <!-- IAM -->
+  <data name="UserFirstNameRequired" xml:space="preserve">
+    <value>The first name is required.</value>
+  </data>
+  <data name="UserFirstNameTooLong" xml:space="preserve">
+    <value>The first name cannot be longer than 100 characters.</value>
+  </data>
+  <data name="UserLastNameRequired" xml:space="preserve">
+    <value>The last name is required.</value>
+  </data>
+  <data name="UserLastNameTooLong" xml:space="preserve">
+    <value>The last name cannot be longer than 100 characters.</value>
+  </data>
+  <data name="UserEmailRequired" xml:space="preserve">
+    <value>The email is required.</value>
+  </data>
+  <data name="UserEmailInvalid" xml:space="preserve">
+    <value>The email format is not valid.</value>
+  </data>
+  <data name="UserEmailTooLong" xml:space="preserve">
+    <value>The email cannot be longer than 200 characters.</value>
+  </data>
+  <data name="UserPasswordRequired" xml:space="preserve">
+    <value>The password is required.</value>
+  </data>
+  <data name="UserPasswordTooShort" xml:space="preserve">
+    <value>The password must have at least 6 characters.</value>
+  </data>
+  <data name="UserPhoneTooLong" xml:space="preserve">
+    <value>The phone cannot be longer than 20 characters.</value>
+  </data>
+  <data name="UserRoleTooLong" xml:space="preserve">
+    <value>The role cannot be longer than 40 characters.</value>
+  </data>
+  <data name="UserEmailDuplicated" xml:space="preserve">
+    <value>A user with the same email already exists.</value>
+  </data>
+  <data name="UserRequestInvalid" xml:space="preserve">
+    <value>The user request is invalid.</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>The user was not found.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingUser" xml:space="preserve">
+    <value>An unexpected error occurred while creating the user.</value>
+  </data>
+  <data name="UnexpectedErrorUpdatingUser" xml:space="preserve">
+    <value>An unexpected error occurred while updating the user.</value>
+  </data>
+  <data name="SessionEmailRequired" xml:space="preserve">
+    <value>The email is required to sign in.</value>
+  </data>
+  <data name="SessionPasswordRequired" xml:space="preserve">
+    <value>The password is required to sign in.</value>
+  </data>
+  <data name="SessionInvalidCredentials" xml:space="preserve">
+    <value>The email or password is incorrect.</value>
+  </data>
+  <data name="UnexpectedErrorSigningIn" xml:space="preserve">
+    <value>An unexpected error occurred while signing in.</value>
+  </data>
 
   <!-- Profiles -->
 
