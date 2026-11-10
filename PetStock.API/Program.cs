@@ -2,11 +2,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
+using PetStock.API.CashShifts.Application.Internal.CommandServices;
+using PetStock.API.CashShifts.Application.Internal.QueryServices;
+using PetStock.API.CashShifts.Application.Services;
+using PetStock.API.CashShifts.Domain.Repositories;
+using PetStock.API.CashShifts.Infrastructure.Persistence.EFC.Repositories;
 using PetStock.API.Catalog.Application.Internal.CommandServices;
 using PetStock.API.Catalog.Application.Internal.QueryServices;
 using PetStock.API.Catalog.Application.Services;
 using PetStock.API.Catalog.Domain.Repositories;
 using PetStock.API.Catalog.Infrastructure.Persistence.EFC.Repositories;
+using PetStock.API.IAM.Application.Internal.CommandServices;
+using PetStock.API.IAM.Application.Internal.QueryServices;
+using PetStock.API.IAM.Application.Services;
+using PetStock.API.IAM.Domain.Repositories;
+using PetStock.API.IAM.Infrastructure.Persistence.EFC.Repositories;
 using PetStock.API.Resources;
 using PetStock.API.Shared.Domain.Repositories;
 using PetStock.API.Shared.Infrastructure.Interfaces.ASP.Configuration;
@@ -18,6 +28,9 @@ using PetStock.API.Inventory.Application.Internal.QueryServices;
 using PetStock.API.Inventory.Application.Services;
 using PetStock.API.Inventory.Domain.Repositories;
 using PetStock.API.Inventory.Infrastructure.Persistence.EFC.Repositories;
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Lower case URLs
@@ -103,6 +116,13 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 // (each bounded context adds its repositories and services under its own comment)
 
 // IAM
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserCommandService, UserCommandService>();
+builder.Services.AddScoped<IUserQueryService, UserQueryService>();
+builder.Services.AddScoped<ISessionRepository, SessionRepository>();
+builder.Services.AddScoped<ISessionCommandService, SessionCommandService>();
+builder.Services.AddScoped<ISessionQueryService, SessionQueryService>();
+
 
 // Profiles
 
@@ -130,6 +150,13 @@ builder.Services.AddScoped<IStockAlertQueryService, StockAlertQueryService>();
 // Purchasing
 
 // Cash Shifts
+builder.Services.AddScoped<ICashShiftRepository, CashShiftRepository>();
+builder.Services.AddScoped<ICashShiftCommandService, CashShiftCommandService>();
+builder.Services.AddScoped<ICashShiftQueryService, CashShiftQueryService>();
+builder.Services.AddScoped<ICashReconciliationRepository, CashReconciliationRepository>();
+builder.Services.AddScoped<ICashReconciliationCommandService, CashReconciliationCommandService>();
+builder.Services.AddScoped<ICashReconciliationQueryService, CashReconciliationQueryService>();
+
 
 // Analytics
 
