@@ -31,4 +31,13 @@ public partial class UserPreference
 
     /// <summary>Language code: en or es.</summary>
     public string Language { get; private set; }
+
+    /// <summary>Changes the preferences with the new values.</summary>
+    public void Update(UpdateUserPreferenceCommand command)
+    {
+        ArgumentNullException.ThrowIfNull(command);
+        NotificationsEnabled = command.NotificationsEnabled;
+        DarkModeEnabled = command.DarkModeEnabled;
+        Language = command.Language;
+    }
 }
