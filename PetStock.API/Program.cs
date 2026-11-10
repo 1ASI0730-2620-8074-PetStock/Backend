@@ -23,11 +23,7 @@ using PetStock.API.Inventory.Application.Internal.QueryServices;
 using PetStock.API.Inventory.Application.Services;
 using PetStock.API.Inventory.Domain.Repositories;
 using PetStock.API.Inventory.Infrastructure.Persistence.EFC.Repositories;
-using PetStock.API.IAM.Application.Internal.CommandServices;
-using PetStock.API.IAM.Application.Internal.QueryServices;
-using PetStock.API.IAM.Application.Services;
-using PetStock.API.IAM.Domain.Repositories;
-using PetStock.API.IAM.Infrastructure.Persistence.EFC.Repositories;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
