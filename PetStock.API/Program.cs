@@ -2,6 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
+using PetStock.API.CashShifts.Application.Internal.CommandServices;
+using PetStock.API.CashShifts.Application.Internal.QueryServices;
+using PetStock.API.CashShifts.Application.Services;
+using PetStock.API.CashShifts.Domain.Repositories;
+using PetStock.API.CashShifts.Infrastructure.Persistence.EFC.Repositories;
 using PetStock.API.Catalog.Application.Internal.CommandServices;
 using PetStock.API.Catalog.Application.Internal.QueryServices;
 using PetStock.API.Catalog.Application.Services;
@@ -145,6 +150,13 @@ builder.Services.AddScoped<IStockAlertQueryService, StockAlertQueryService>();
 // Purchasing
 
 // Cash Shifts
+builder.Services.AddScoped<ICashShiftRepository, CashShiftRepository>();
+builder.Services.AddScoped<ICashShiftCommandService, CashShiftCommandService>();
+builder.Services.AddScoped<ICashShiftQueryService, CashShiftQueryService>();
+builder.Services.AddScoped<ICashReconciliationRepository, CashReconciliationRepository>();
+builder.Services.AddScoped<ICashReconciliationCommandService, CashReconciliationCommandService>();
+builder.Services.AddScoped<ICashReconciliationQueryService, CashReconciliationQueryService>();
+
 
 // Analytics
 
