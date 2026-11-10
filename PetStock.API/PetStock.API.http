@@ -2,6 +2,195 @@
 
 ### ===== IAM =====
 
+### IAM 1. Sign up (201)
+POST {{baseUrl}}/api/v1/users
+Content-Type: application/json
+Accept-Language: en
+
+
+{
+  "firstName": "Eduardo",
+  "lastName": "Salazar",
+  "email": "eduardo@petstock.pe",
+  "password": "123456",
+  "phone": "+51999888777",
+  "role": "Owner"
+}
+
+
+### IAM 2. Second user (201)
+POST {{baseUrl}}/api/v1/users
+Content-Type: application/json
+Accept-Language: en
+
+
+{
+  "firstName": "Lucia",
+  "lastName": "Ramos",
+  "email": "lucia@petstock.pe",
+  "password": "123456",
+  "phone": "+51988777666",
+  "role": "Staff"
+}
+
+
+### IAM 3. Duplicated email in English (409)
+POST {{baseUrl}}/api/v1/users
+Content-Type: application/json
+Accept-Language: en
+
+
+{
+  "firstName": "Eduardo",
+  "lastName": "Copy",
+  "email": "EDUARDO@petstock.pe",
+  "password": "123456"
+}
+
+
+### IAM 4. Duplicated email in Spanish (409)
+POST {{baseUrl}}/api/v1/users
+Content-Type: application/json
+Accept-Language: es
+
+
+{
+  "firstName": "Eduardo",
+  "lastName": "Copia",
+  "email": "eduardo@petstock.pe",
+  "password": "123456"
+}
+
+
+### IAM 5. Invalid data in Spanish (400)
+POST {{baseUrl}}/api/v1/users
+Content-Type: application/json
+Accept-Language: es
+
+
+{
+  "firstName": "",
+  "lastName": "Sin nombre",
+  "email": "not-an-email",
+  "password": "123"
+}
+
+
+### IAM 6. Get all users (200)
+GET {{baseUrl}}/api/v1/users
+Accept: application/json
+
+
+### IAM 7. Get user by id (200)
+GET {{baseUrl}}/api/v1/users/1
+Accept: application/json
+
+
+### IAM 8. User not found (404)
+GET {{baseUrl}}/api/v1/users/999
+Accept: application/json
+
+
+### IAM 9. Update user (200)
+PUT {{baseUrl}}/api/v1/users/1
+Content-Type: application/json
+Accept-Language: en
+
+
+{
+  "firstName": "Eduardo",
+  "lastName": "Salazar Ruiz",
+  "email": "eduardo@petstock.pe",
+  "phone": "+51999000111"
+}
+
+
+### IAM 10. Update with the email of another user in Spanish (409)
+PUT {{baseUrl}}/api/v1/users/1
+Content-Type: application/json
+Accept-Language: es
+
+
+{
+  "firstName": "Eduardo",
+  "lastName": "Salazar",
+  "email": "lucia@petstock.pe",
+  "phone": ""
+}
+
+
+### IAM 11. Update user not found in Spanish (404)
+PUT {{baseUrl}}/api/v1/users/999
+Content-Type: application/json
+Accept-Language: es
+
+
+{
+  "firstName": "Nadie",
+  "lastName": "Nadie",
+  "email": "nadie@petstock.pe",
+  "phone": ""
+}
+
+
+### IAM 12. Sign in (201)
+POST {{baseUrl}}/api/v1/sessions
+Content-Type: application/json
+Accept-Language: en
+
+
+{
+  "email": "eduardo@petstock.pe",
+  "password": "123456"
+}
+
+
+### IAM 13. Wrong password in English (401)
+POST {{baseUrl}}/api/v1/sessions
+Content-Type: application/json
+Accept-Language: en
+
+
+{
+  "email": "eduardo@petstock.pe",
+  "password": "wrong-password"
+}
+
+
+### IAM 14. Wrong password in Spanish (401)
+POST {{baseUrl}}/api/v1/sessions
+Content-Type: application/json
+Accept-Language: es
+
+
+{
+  "email": "eduardo@petstock.pe",
+  "password": "wrong-password"
+}
+
+
+### IAM 15. Sign in without password in Spanish (400)
+POST {{baseUrl}}/api/v1/sessions
+Content-Type: application/json
+Accept-Language: es
+
+
+{
+  "email": "eduardo@petstock.pe",
+  "password": ""
+}
+
+
+### IAM 16. Get session by id (200)
+GET {{baseUrl}}/api/v1/sessions/1
+Accept: application/json
+
+
+### IAM 17. Session not found (404)
+GET {{baseUrl}}/api/v1/sessions/999
+Accept: application/json
+
+
 ### ===== Profiles =====
 
 ### ===== Catalog =====
