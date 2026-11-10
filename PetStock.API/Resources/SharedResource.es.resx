@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="UnexpectedServerError" xml:space="preserve">
+    <value>Error inesperado del servidor</value>
+  </data>
+    <data name="UnexpectedErrorProcessingRequest" xml:space="preserve">
+    <value>Ocurrió un error inesperado al procesar la solicitud.</value>
+  </data>
+    <data name="InvalidModelStateTitle" xml:space="preserve">
+    <value>Ocurrieron uno o más errores de validación.</value>
+  </data>
+  <data name="RequiredCategoryName" xml:space="preserve">
+    <value>El nombre de la categoría es obligatorio.</value>
+  </data>
+  <data name="CategoryNameTooLong" xml:space="preserve">
+    <value>El nombre de la categoría no puede tener más de 100 caracteres.</value>
+  </data>
+  <data name="CategoryNameDuplicated" xml:space="preserve">
+    <value>Ya existe una categoría con el mismo nombre.</value>
+  </data>
+  <data name="InvalidCategoryRequest" xml:space="preserve">
+    <value>La solicitud de categoría no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingCategory" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear la categoría.</value>
+  </data>
+
+  <!-- IAM -->
+  <data name="UserFirstNameRequired" xml:space="preserve">
+    <value>El nombre es obligatorio.</value>
+  </data>
+  <data name="UserFirstNameTooLong" xml:space="preserve">
+    <value>El nombre no puede tener más de 100 caracteres.</value>
+  </data>
+  <data name="UserLastNameRequired" xml:space="preserve">
+    <value>El apellido es obligatorio.</value>
+  </data>
+  <data name="UserLastNameTooLong" xml:space="preserve">
+    <value>El apellido no puede tener más de 100 caracteres.</value>
+  </data>
+  <data name="UserEmailRequired" xml:space="preserve">
+    <value>El correo electrónico es obligatorio.</value>
+  </data>
+  <data name="UserEmailInvalid" xml:space="preserve">
+    <value>El formato del correo electrónico no es válido.</value>
+  </data>
+  <data name="UserEmailTooLong" xml:space="preserve">
+    <value>El correo electrónico no puede tener más de 200 caracteres.</value>
+  </data>
+  <data name="UserPasswordRequired" xml:space="preserve">
+    <value>La contraseña es obligatoria.</value>
+  </data>
+  <data name="UserPasswordTooShort" xml:space="preserve">
+    <value>La contraseña debe tener al menos 6 caracteres.</value>
+  </data>
+  <data name="UserPhoneTooLong" xml:space="preserve">
+    <value>El teléfono no puede tener más de 20 caracteres.</value>
+  </data>
+  <data name="UserRoleTooLong" xml:space="preserve">
+    <value>El rol no puede tener más de 40 caracteres.</value>
+  </data>
+  <data name="UserEmailDuplicated" xml:space="preserve">
+    <value>Ya existe un usuario con el mismo correo electrónico.</value>
+  </data>
+  <data name="UserRequestInvalid" xml:space="preserve">
+    <value>La solicitud de usuario no es válida.</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>No se encontró el usuario.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingUser" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear el usuario.</value>
+  </data>
+  <data name="UnexpectedErrorUpdatingUser" xml:space="preserve">
+    <value>Ocurrió un error inesperado al actualizar el usuario.</value>
+  </data>
+  <data name="SessionEmailRequired" xml:space="preserve">
+    <value>El correo electrónico es obligatorio para iniciar sesión.</value>
+  </data>
+  <data name="SessionPasswordRequired" xml:space="preserve">
+    <value>La contraseña es obligatoria para iniciar sesión.</value>
+  </data>
+  <data name="SessionInvalidCredentials" xml:space="preserve">
+    <value>El correo electrónico o la contraseña son incorrectos.</value>
+  </data>
+  <data name="UnexpectedErrorSigningIn" xml:space="preserve">
+    <value>Ocurrió un error inesperado al iniciar sesión.</value>
+  </data>
+
+
+  <!-- Profiles -->
+  <data name="InvalidPreferenceUserId" xml:space="preserve">
+    <value>El id del usuario debe ser mayor que cero.</value>
+  </data>
+  <data name="RequiredPreferenceLanguage" xml:space="preserve">
+    <value>El idioma es obligatorio.</value>
+  </data>
+  <data name="InvalidPreferenceLanguage" xml:space="preserve">
+    <value>El idioma debe ser en o es.</value>
+  </data>
+  <data name="UserPreferenceDuplicated" xml:space="preserve">
+    <value>Este usuario ya tiene preferencias.</value>
+  </data>
+  <data name="UserPreferenceNotFound" xml:space="preserve">
+    <value>No se encontraron las preferencias.</value>
+  </data>
+  <data name="UnexpectedErrorSavingUserPreference" xml:space="preserve">
+    <value>Ocurrió un error inesperado al guardar las preferencias.</value>
+  </data>
+
+
+  <!-- Catalog -->
+
+  <data name="RequiredSupplierCompanyName" xml:space="preserve">
+    <value>El nombre de la empresa del proveedor es obligatorio.</value>
+  </data>
+  <data name="SupplierCompanyNameTooLong" xml:space="preserve">
+    <value>El nombre de la empresa del proveedor no puede tener más de 150 caracteres.</value>
+  </data>
+  <data name="SupplierFieldTooLong" xml:space="preserve">
+    <value>Uno de los campos del proveedor es demasiado largo.</value>
+  </data>
+  <data name="InvalidSupplierRequest" xml:space="preserve">
+    <value>La solicitud de proveedor no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingSupplier" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear el proveedor.</value>
+  </data>
+  <data name="RequiredProductName" xml:space="preserve">
+    <value>El nombre del producto es obligatorio.</value>
+  </data>
+  <data name="ProductNameTooLong" xml:space="preserve">
+    <value>El nombre del producto no puede tener más de 150 caracteres.</value>
+  </data>
+  <data name="ProductDescriptionTooLong" xml:space="preserve">
+    <value>La descripción del producto no puede tener más de 255 caracteres.</value>
+  </data>
+  <data name="InvalidProductPrice" xml:space="preserve">
+    <value>El precio del producto debe ser mayor que cero.</value>
+  </data>
+  <data name="InvalidProductCategoryId" xml:space="preserve">
+    <value>El id de la categoría del producto debe ser mayor que cero.</value>
+  </data>
+  <data name="InvalidProductSupplierId" xml:space="preserve">
+    <value>El id del proveedor del producto debe ser mayor que cero.</value>
+  </data>
+  <data name="ProductCategoryNotFound" xml:space="preserve">
+    <value>La categoría del producto no existe.</value>
+  </data>
+  <data name="ProductSupplierNotFound" xml:space="preserve">
+    <value>El proveedor del producto no existe.</value>
+  </data>
+  <data name="InvalidProductRequest" xml:space="preserve">
+    <value>La solicitud de producto no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingProduct" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear el producto.</value>
+  </data>
+
+
+  <!-- Inventory -->
+   <data name="InvalidProductStockProductId" xml:space="preserve">
+    <value>El id del producto del inventario debe ser mayor que cero.</value>
+  </data>
+  <data name="InvalidProductStockQuantity" xml:space="preserve">
+    <value>Las cantidades de stock no pueden ser negativas.</value>
+  </data>
+  <data name="ProductStockDuplicated" xml:space="preserve">
+    <value>El stock de este producto ya está registrado.</value>
+  </data>
+  <data name="ProductStockNotFound" xml:space="preserve">
+    <value>No se encontró el stock del producto.</value>
+  </data>
+  <data name="InvalidProductStockRequest" xml:space="preserve">
+    <value>La solicitud de stock del producto no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingProductStock" xml:space="preserve">
+    <value>Ocurrió un error inesperado al registrar el stock del producto.</value>
+  </data>
+  <data name="UnexpectedErrorUpdatingProductStock" xml:space="preserve">
+    <value>Ocurrió un error inesperado al actualizar el stock del producto.</value>
+  </data>
+  <data name="InvalidStockAlertProductId" xml:space="preserve">
+    <value>El id del producto de la alerta debe ser mayor que cero.</value>
+  </data>
+  <data name="RequiredStockAlertLevel" xml:space="preserve">
+    <value>El nivel de la alerta es obligatorio.</value>
+  </data>
+  <data name="InvalidStockAlertLevel" xml:space="preserve">
+    <value>El nivel de la alerta debe ser low o critical.</value>
+  </data>
+  <data name="InvalidStockAlertRequest" xml:space="preserve">
+    <value>La solicitud de alerta de stock no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingStockAlert" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear la alerta de stock.</value>
+  </data>
+
+  <!-- Sales -->
+
+  <!-- Customers -->
+
+  <!-- Purchasing -->
+
+  <!-- Cash Shifts -->
+  <data name="CashShiftUserIdRequired" xml:space="preserve">
+    <value>Se requiere un id de usuario válido para abrir un turno de caja.</value>
+  </data>
+  <data name="CashShiftOpeningAmountInvalid" xml:space="preserve">
+    <value>El monto de apertura debe ser cero o mayor.</value>
+  </data>
+  <data name="CashShiftClosingAmountInvalid" xml:space="preserve">
+    <value>El monto de cierre debe ser cero o mayor.</value>
+  </data>
+  <data name="CashShiftAlreadyOpen" xml:space="preserve">
+    <value>El usuario ya tiene un turno de caja abierto.</value>
+  </data>
+  <data name="CashShiftAlreadyClosed" xml:space="preserve">
+    <value>El turno de caja ya está cerrado.</value>
+  </data>
+  <data name="CashShiftNotFound" xml:space="preserve">
+    <value>No se encontró el turno de caja.</value>
+  </data>
+  <data name="CashShiftRequestInvalid" xml:space="preserve">
+    <value>La solicitud del turno de caja no es válida.</value>
+  </data>
+  <data name="UnexpectedErrorOpeningCashShift" xml:space="preserve">
+    <value>Ocurrió un error inesperado al abrir el turno de caja.</value>
+  </data>
+  <data name="UnexpectedErrorClosingCashShift" xml:space="preserve">
+    <value>Ocurrió un error inesperado al cerrar el turno de caja.</value>
+  </data>
+  <data name="CashReconciliationCashShiftIdRequired" xml:space="preserve">
+    <value>Se requiere un id de turno de caja válido.</value>
+  </data>
+  <data name="CashReconciliationAmountInvalid" xml:space="preserve">
+    <value>Los montos deben ser cero o mayores.</value>
+  </data>
+  <data name="CashReconciliationDuplicated" xml:space="preserve">
+    <value>El turno de caja ya tiene un cuadre registrado.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingCashReconciliation" xml:space="preserve">
+    <value>Ocurrió un error inesperado al registrar el cuadre de caja.</value>
+  </data>
+
+
+  <!-- Analytics -->
+
+</root>
