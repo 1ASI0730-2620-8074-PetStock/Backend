@@ -28,6 +28,16 @@ using PetStock.API.Inventory.Application.Internal.QueryServices;
 using PetStock.API.Inventory.Application.Services;
 using PetStock.API.Inventory.Domain.Repositories;
 using PetStock.API.Inventory.Infrastructure.Persistence.EFC.Repositories;
+using PetStock.API.Purchasing.Application.Internal.CommandServices;
+using PetStock.API.Purchasing.Application.Internal.QueryServices;
+using PetStock.API.Purchasing.Application.Services;
+using PetStock.API.Purchasing.Domain.Repositories;
+using PetStock.API.Purchasing.Infrastructure.Persistence.EFC.Repositories;
+using PetStock.API.Analytics.Application.Internal.CommandServices;
+using PetStock.API.Analytics.Application.Internal.QueryServices;
+using PetStock.API.Analytics.Application.Services;
+using PetStock.API.Analytics.Domain.Repositories;
+using PetStock.API.Analytics.Infrastructure.Persistence.EFC.Repositories;
 using PetStock.API.Profiles.Application.Internal.CommandServices;
 using PetStock.API.Profiles.Application.Internal.QueryServices;
 using PetStock.API.Profiles.Application.Services;
@@ -157,6 +167,13 @@ builder.Services.AddScoped<IStockAlertQueryService, StockAlertQueryService>();
 
 // Purchasing
 
+builder.Services.AddScoped<IPurchaseOrderRepository, PurchaseOrderRepository>();
+builder.Services.AddScoped<IPurchaseOrderCommandService, PurchaseOrderCommandService>();
+builder.Services.AddScoped<IPurchaseOrderQueryService, PurchaseOrderQueryService>();
+builder.Services.AddScoped<IGoodsReceiptRepository, GoodsReceiptRepository>();
+builder.Services.AddScoped<IGoodsReceiptCommandService, GoodsReceiptCommandService>();
+builder.Services.AddScoped<IGoodsReceiptQueryService, GoodsReceiptQueryService>();
+
 // Cash Shifts
 builder.Services.AddScoped<ICashShiftRepository, CashShiftRepository>();
 builder.Services.AddScoped<ICashShiftCommandService, CashShiftCommandService>();
@@ -167,6 +184,10 @@ builder.Services.AddScoped<ICashReconciliationQueryService, CashReconciliationQu
 
 
 // Analytics
+
+builder.Services.AddScoped<IReportRepository, ReportRepository>();
+builder.Services.AddScoped<IReportCommandService, ReportCommandService>();
+builder.Services.AddScoped<IReportQueryService, ReportQueryService>();
 
 var app = builder.Build();
 

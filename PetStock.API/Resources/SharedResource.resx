@@ -253,8 +253,54 @@
   <data name="UnexpectedErrorCreatingCashReconciliation" xml:space="preserve">
     <value>An unexpected error occurred while creating the cash reconciliation.</value>
   </data>
-
-
+  <data name="PurchaseSupplierIdInvalid" xml:space="preserve">
+    <value>The supplier id has to be greater than zero.</value>
+  </data>
+  <data name="PurchaseProductIdInvalid" xml:space="preserve">
+    <value>The product id has to be greater than zero.</value>
+  </data>
+  <data name="PurchaseQuantityInvalid" xml:space="preserve">
+    <value>The quantity has to be greater than zero.</value>
+  </data>
+  <data name="PurchaseUnitCostInvalid" xml:space="preserve">
+    <value>The unit cost has to be greater than zero.</value>
+  </data>
+  <data name="InvalidPurchaseRequest" xml:space="preserve">
+    <value>The purchase request is invalid.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingPurchase" xml:space="preserve">
+    <value>An unexpected error occurred while creating the purchase.</value>
+  </data>
+  <data name="PurchaseNotFound" xml:space="preserve">
+    <value>The purchase cannot be found.</value>
+  </data>
+  <data name="PurchaseAlreadyReceived" xml:space="preserve">
+    <value>The goods of this purchase were already received.</value>
+  </data>
+  <data name="GoodsReceiptPurchaseIdInvalid" xml:space="preserve">
+    <value>The purchase id has to be greater than zero.</value>
+  </data>
+  <data name="GoodsReceiptNotesTooLong" xml:space="preserve">
+    <value>The notes cannot be longer than 255 characters.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingGoodsReceipt" xml:space="preserve">
+    <value>An unexpected error occurred while registering the goods receipt.</value>
+  </data>
+  <data name="ReportUserIdInvalid" xml:space="preserve">
+    <value>The user id must be greater than zero.</value>
+  </data>
+  <data name="RequiredReportType" xml:space="preserve">
+    <value>The report type is required.</value>
+  </data>
+  <data name="ReportTypeTooLong" xml:space="preserve">
+    <value>The report type cannot be longer than 40 characters.</value>
+  </data>
+  <data name="ReportFileFormatTooLong" xml:space="preserve">
+    <value>The file format cannot be longer than 20 characters.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingReport" xml:space="preserve">
+    <value>An unexpected error occurred while creating the report.</value>
+  </data>
   <!-- Analytics -->
 
 </root>
