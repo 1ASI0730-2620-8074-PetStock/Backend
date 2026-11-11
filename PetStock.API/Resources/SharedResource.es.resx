@@ -236,8 +236,54 @@
   <data name="UnexpectedErrorCreatingCashReconciliation" xml:space="preserve">
     <value>Ocurrió un error inesperado al registrar el cuadre de caja.</value>
   </data>
-
-
+  <data name="PurchaseSupplierIdInvalid" xml:space="preserve">
+    <value>El id del proveedor debe ser mayor que cero.</value>
+  </data>
+  <data name="PurchaseProductIdInvalid" xml:space="preserve">
+    <value>El id del producto debe ser mayor que cero.</value>
+  </data>
+  <data name="PurchaseQuantityInvalid" xml:space="preserve">
+    <value>La cantidad debe ser mayor que cero.</value>
+  </data>
+  <data name="PurchaseUnitCostInvalid" xml:space="preserve">
+    <value>El costo unitario debe ser mayor que cero.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingPurchase" xml:space="preserve">
+    <value>Ocurrió un error inesperado al registrar la compra.</value>
+  </data>
+  <data name="PurchaseNotFound" xml:space="preserve">
+    <value>No se encontró la compra.</value>
+  </data>
+  <data name="PurchaseAlreadyReceived" xml:space="preserve">
+    <value>La mercadería de esta compra ya fue recibida.</value>
+  </data>
+  <data name="InvalidPurchaseRequest" xml:space="preserve">
+    <value>La solicitud de compra no es válida.</value>
+  </data>
+  <data name="GoodsReceiptPurchaseIdInvalid" xml:space="preserve">
+    <value>El id de la compra debe ser mayor que cero.</value>
+  </data>
+  <data name="GoodsReceiptNotesTooLong" xml:space="preserve">
+    <value>Las notas no pueden tener más de 255 caracteres.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingGoodsReceipt" xml:space="preserve">
+    <value>Ocurrió un error inesperado al registrar la recepción de mercadería.</value>
+  </data>
+  <data name="ReportUserIdInvalid" xml:space="preserve">
+    <value>El id del usuario debe ser mayor que cero.</value>
+  </data>
+  <data name="ReportTypeTooLong" xml:space="preserve">
+    <value>El tipo de reporte no puede tener más de 40 caracteres.</value>
+  </data>
+  <data name="RequiredReportType" xml:space="preserve">
+    <value>El tipo de reporte es obligatorio.</value>
+  </data>
+  <data name="ReportFileFormatTooLong" xml:space="preserve">
+    <value>El formato de archivo no puede tener más de 20 caracteres.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingReport" xml:space="preserve">
+    <value>Ocurrió un error inesperado al crear el reporte.</value>
+  </data>
   <!-- Analytics -->
 
 </root>
