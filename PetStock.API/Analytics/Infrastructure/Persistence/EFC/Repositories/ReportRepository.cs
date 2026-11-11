@@ -12,4 +12,4 @@ public class ReportRepository(AppDbContext context)
     : BaseRepository<Report>(context),
         IReportRepository
 {
-}g
+}
