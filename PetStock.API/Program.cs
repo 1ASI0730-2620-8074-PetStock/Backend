@@ -38,6 +38,12 @@ using PetStock.API.Analytics.Application.Internal.QueryServices;
 using PetStock.API.Analytics.Application.Services;
 using PetStock.API.Analytics.Domain.Repositories;
 using PetStock.API.Analytics.Infrastructure.Persistence.EFC.Repositories;
+using PetStock.API.Profiles.Application.Internal.CommandServices;
+using PetStock.API.Profiles.Application.Internal.QueryServices;
+using PetStock.API.Profiles.Application.Services;
+using PetStock.API.Profiles.Domain.Repositories;
+using PetStock.API.Profiles.Infrastructure.Persistence.EFC.Repositories;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -134,6 +140,9 @@ builder.Services.AddScoped<ISessionQueryService, SessionQueryService>();
 
 
 // Profiles
+builder.Services.AddScoped<IUserPreferenceRepository, UserPreferenceRepository>();
+builder.Services.AddScoped<IUserPreferenceCommandService, UserPreferenceCommandService>();
+builder.Services.AddScoped<IUserPreferenceQueryService, UserPreferenceQueryService>();
 
 // Catalog
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
