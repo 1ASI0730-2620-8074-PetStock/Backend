@@ -464,6 +464,70 @@ Accept: application/json
 
 ### ===== Purchasing =====
 
+### Purchasing 1. Create purchase (201)
+POST {{baseUrl}}/api/v1/purchases
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "supplierId": 1,
+  "productId": 1,
+  "quantity": 10,
+  "unitCost": 45.50
+}
+
+
+### Purchasing 2. Get all purchases (200)
+GET {{baseUrl}}/api/v1/purchases
+Accept: application/json
+
+
+### Purchasing 3. Get purchase by id (200)
+GET {{baseUrl}}/api/v1/purchases/1
+Accept: application/json
+
+
+### Purchasing 4. Purchase not found (404)
+GET {{baseUrl}}/api/v1/purchases/999
+Accept: application/json
+
+
+### Purchasing 5. Create goods receipt (201)
+POST {{baseUrl}}/api/v1/goods-receipts
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "purchaseId": 1,
+  "notes": "Goods received in good condition"
+}
+
+
+### Purchasing 6. Get all goods receipts (200)
+GET {{baseUrl}}/api/v1/goods-receipts
+Accept: application/json
+
+
+### Purchasing 7. Get goods receipt by id (200)
+GET {{baseUrl}}/api/v1/goods-receipts/1
+Accept: application/json
+
+
+### Purchasing 8. Goods receipt not found (404)
+GET {{baseUrl}}/api/v1/goods-receipts/999
+Accept: application/json
+
+
+### Purchasing 9. Delete purchase (204)
+DELETE {{baseUrl}}/api/v1/purchases/1
+Accept: application/json
+
+
+### Purchasing 10. Purchase not found after delete (404)
+GET {{baseUrl}}/api/v1/purchases/1
+Accept: application/json
+
+
 ### ===== Cash Shifts =====
 
 ### Cash 1. Open a cash shift (201)
@@ -616,3 +680,43 @@ Accept: application/json
 
 
 ### ===== Analytics =====
+
+### ===== Analytics =====
+
+### Analytics 1. Create report (201)
+POST {{baseUrl}}/api/v1/reports
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "userId": 1,
+  "reportType": "Weekly Sales",
+  "fileFormat": "PDF"
+}
+
+
+### Analytics 2. Get all reports (200)
+GET {{baseUrl}}/api/v1/reports
+Accept: application/json
+
+
+### Analytics 3. Get report by id (200)
+GET {{baseUrl}}/api/v1/reports/1
+Accept: application/json
+
+
+### Analytics 4. Report not found (404)
+GET {{baseUrl}}/api/v1/reports/999
+Accept: application/json
+
+
+### Analytics 5. Invalid report in Spanish (400)
+POST {{baseUrl}}/api/v1/reports
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "userId": 0,
+  "reportType": "",
+  "fileFormat": ""
+}
