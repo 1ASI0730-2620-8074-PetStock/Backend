@@ -43,6 +43,17 @@ using PetStock.API.Profiles.Application.Internal.QueryServices;
 using PetStock.API.Profiles.Application.Services;
 using PetStock.API.Profiles.Domain.Repositories;
 using PetStock.API.Profiles.Infrastructure.Persistence.EFC.Repositories;
+using PetStock.API.Sales.Application.Internal.CommandServices;
+using PetStock.API.Sales.Application.Internal.QueryServices;
+using PetStock.API.Sales.Application.Services;
+using PetStock.API.Sales.Domain.Repositories;
+using PetStock.API.Sales.Infrastructure.Persistence.EFC.Repositories;
+using PetStock.API.Customers.Application.Internal.CommandServices;
+using PetStock.API.Customers.Application.Internal.QueryServices;
+using PetStock.API.Customers.Application.Services;
+using PetStock.API.Customers.Domain.Repositories;
+using PetStock.API.Customers.Infrastructure.Persistence.EFC.Repositories;
+
 
 
 
@@ -163,7 +174,23 @@ builder.Services.AddScoped<IStockAlertCommandService, StockAlertCommandService>(
 builder.Services.AddScoped<IStockAlertQueryService, StockAlertQueryService>();
 // Sales
 
+builder.Services.AddScoped<ISaleRepository, SaleRepository>();
+builder.Services.AddScoped<ISaleCommandService, SaleCommandService>();
+builder.Services.AddScoped<ISaleQueryService, SaleQueryService>();
+builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+builder.Services.AddScoped<IPaymentCommandService, PaymentCommandService>();
+builder.Services.AddScoped<IPaymentQueryService, PaymentQueryService>();
+
+
 // Customers
+
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<ICustomerCommandService, CustomerCommandService>();
+builder.Services.AddScoped<ICustomerQueryService, CustomerQueryService>();
+
+builder.Services.AddScoped<IPurchaseHistoryEntryRepository, PurchaseHistoryEntryRepository>();
+builder.Services.AddScoped<IPurchaseHistoryEntryCommandService, PurchaseHistoryEntryCommandService>();
+builder.Services.AddScoped<IPurchaseHistoryEntryQueryService, PurchaseHistoryEntryQueryService>();
 
 // Purchasing
 
