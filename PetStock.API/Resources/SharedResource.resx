@@ -209,7 +209,85 @@
 
   <!-- Sales -->
 
+  <data name="SaleUserIdInvalid" xml:space="preserve">
+  <value>The user id must be greater than zero.</value>
+</data>
+  <data name="RequiredSalePaymentMethod" xml:space="preserve">
+  <value>The payment method is required.</value>
+</data>
+  <data name="SalePaymentMethodTooLong" xml:space="preserve">
+  <value>The payment method cannot be longer than 40 characters.</value>
+</data>
+  <data name="RequiredSaleItems" xml:space="preserve">
+  <value>The sale must have at least one product.</value>
+</data>
+  <data name="SaleItemProductIdInvalid" xml:space="preserve">
+  <value>The product id must be greater than zero.</value>
+</data>
+  <data name="SaleItemQuantityInvalid" xml:space="preserve">
+  <value>The quantity must be greater than zero.</value>
+</data>
+  <data name="SaleItemUnitPriceInvalid" xml:space="preserve">
+  <value>The unit price cannot be negative.</value>
+</data>
+  <data name="InvalidSaleRequest" xml:space="preserve">
+  <value>The sale request is invalid.</value>
+</data>
+  <data name="UnexpectedErrorCreatingSale" xml:space="preserve">
+  <value>An unexpected error occurred while creating the sale.</value>
+</data>
+  <data name="PaymentSaleIdInvalid" xml:space="preserve">
+  <value>The sale id must be greater than zero.</value>
+</data>
+  <data name="PaymentAmountInvalid" xml:space="preserve">
+  <value>The amount must be greater than zero.</value>
+</data>
+  <data name="PaymentSaleNotFound" xml:space="preserve">
+  <value>The sale of the payment does not exist.</value>
+</data>
+  <data name="UnexpectedErrorCreatingPayment" xml:space="preserve">
+  <value>An unexpected error occurred while creating the payment.</value>
+</data>
+
+
   <!-- Customers -->
+
+  <data name="RequiredCustomerName" xml:space="preserve">
+  <value>The customer name is required.</value>
+</data>
+  <data name="CustomerNameTooLong" xml:space="preserve">
+  <value>The customer name cannot be longer than 150 characters.</value>
+</data>
+  <data name="CustomerEmailTooLong" xml:space="preserve">
+  <value>The customer email cannot be longer than 150 characters.</value>
+</data>
+  <data name="CustomerPhoneTooLong" xml:space="preserve">
+  <value>The customer phone cannot be longer than 30 characters.</value>
+</data>
+  <data name="CustomerAddressTooLong" xml:space="preserve">
+  <value>The customer address cannot be longer than 255 characters.</value>
+</data>
+  <data name="CustomerEmailDuplicated" xml:space="preserve">
+  <value>A customer with the same email already exists.</value>
+</data>
+  <data name="UnexpectedErrorCreatingCustomer" xml:space="preserve">
+  <value>An unexpected error occurred while creating the customer.</value>
+</data>
+  <data name="HistoryCustomerIdInvalid" xml:space="preserve">
+  <value>The customer id must be greater than zero.</value>
+</data>
+  <data name="HistorySaleIdInvalid" xml:space="preserve">
+  <value>The sale id must be greater than zero.</value>
+</data>
+  <data name="HistoryTotalInvalid" xml:space="preserve">
+  <value>The total cannot be negative.</value>
+</data>
+  <data name="HistoryCustomerNotFound" xml:space="preserve">
+  <value>The customer of the purchase does not exist.</value>
+</data>
+  <data name="UnexpectedErrorCreatingHistoryEntry" xml:space="preserve">
+  <value>An unexpected error occurred while saving the purchase in the history.</value>
+</data>
 
   <!-- Purchasing -->
 
@@ -253,8 +331,54 @@
   <data name="UnexpectedErrorCreatingCashReconciliation" xml:space="preserve">
     <value>An unexpected error occurred while creating the cash reconciliation.</value>
   </data>
-
-
+  <data name="PurchaseSupplierIdInvalid" xml:space="preserve">
+    <value>The supplier id has to be greater than zero.</value>
+  </data>
+  <data name="PurchaseProductIdInvalid" xml:space="preserve">
+    <value>The product id has to be greater than zero.</value>
+  </data>
+  <data name="PurchaseQuantityInvalid" xml:space="preserve">
+    <value>The quantity has to be greater than zero.</value>
+  </data>
+  <data name="PurchaseUnitCostInvalid" xml:space="preserve">
+    <value>The unit cost has to be greater than zero.</value>
+  </data>
+  <data name="InvalidPurchaseRequest" xml:space="preserve">
+    <value>The purchase request is invalid.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingPurchase" xml:space="preserve">
+    <value>An unexpected error occurred while creating the purchase.</value>
+  </data>
+  <data name="PurchaseNotFound" xml:space="preserve">
+    <value>The purchase cannot be found.</value>
+  </data>
+  <data name="PurchaseAlreadyReceived" xml:space="preserve">
+    <value>The goods of this purchase were already received.</value>
+  </data>
+  <data name="GoodsReceiptPurchaseIdInvalid" xml:space="preserve">
+    <value>The purchase id has to be greater than zero.</value>
+  </data>
+  <data name="GoodsReceiptNotesTooLong" xml:space="preserve">
+    <value>The notes cannot be longer than 255 characters.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingGoodsReceipt" xml:space="preserve">
+    <value>An unexpected error occurred while registering the goods receipt.</value>
+  </data>
+  <data name="ReportUserIdInvalid" xml:space="preserve">
+    <value>The user id must be greater than zero.</value>
+  </data>
+  <data name="RequiredReportType" xml:space="preserve">
+    <value>The report type is required.</value>
+  </data>
+  <data name="ReportTypeTooLong" xml:space="preserve">
+    <value>The report type cannot be longer than 40 characters.</value>
+  </data>
+  <data name="ReportFileFormatTooLong" xml:space="preserve">
+    <value>The file format cannot be longer than 20 characters.</value>
+  </data>
+  <data name="UnexpectedErrorCreatingReport" xml:space="preserve">
+    <value>An unexpected error occurred while creating the report.</value>
+  </data>
   <!-- Analytics -->
 
 </root>

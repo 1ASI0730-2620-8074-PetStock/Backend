@@ -526,9 +526,320 @@ GET {{baseUrl}}/api/v1/stock-alerts/999
 Accept: application/json
 ### ===== Sales =====
 
+### Sales 1. Create a sale with two items (201)
+POST {{baseUrl}}/api/v1/sales
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "userId": 1,
+  "customerId": null,
+  "paymentMethod": "cash",
+  "items": [
+    {
+      "productId": 1,
+      "quantity": 2,
+      "unitPrice": 35.50
+    },
+    {
+      "productId": 2,
+      "quantity": 1,
+      "unitPrice": 120.00
+    }
+  ]
+}
+
+### Sales 2. Sale without items in Spanish (400)
+POST {{baseUrl}}/api/v1/sales
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "userId": 1,
+  "customerId": null,
+  "paymentMethod": "cash",
+  "items": []
+}
+
+### Sales 3. Item with quantity zero in English (400)
+POST {{baseUrl}}/api/v1/sales
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "userId": 1,
+  "customerId": null,
+  "paymentMethod": "yape",
+  "items": [
+    {
+      "productId": 1,
+      "quantity": 0,
+      "unitPrice": 35.50
+    }
+  ]
+}
+
+### Sales 4. Get all sales (200)
+GET {{baseUrl}}/api/v1/sales
+Accept: application/json
+
+### Sales 5. Get sale by id (200)
+GET {{baseUrl}}/api/v1/sales/1
+Accept: application/json
+
+### Sales 6. Sale not found (404)
+GET {{baseUrl}}/api/v1/sales/999
+Accept: application/json
+
+### Sales 7. Create a sale with a customer (201)
+POST {{baseUrl}}/api/v1/sales
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "userId": 1,
+  "customerId": 1,
+  "paymentMethod": "card",
+  "items": [
+    {
+      "productId": 3,
+      "quantity": 1,
+      "unitPrice": 45.00
+    }
+  ]
+}
+
+### Sales 8. Delete sale (204)
+DELETE {{baseUrl}}/api/v1/sales/2
+
+### Sales 9. Delete sale again (404)
+DELETE {{baseUrl}}/api/v1/sales/2
+
+### Payments 1. Pay sale 1 (201)
+POST {{baseUrl}}/api/v1/payments
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "saleId": 1,
+  "amount": 191.00,
+  "paymentMethod": "cash"
+}
+
+### Payments 2. Sale not found in Spanish (404)
+POST {{baseUrl}}/api/v1/payments
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "saleId": 999,
+  "amount": 50.00,
+  "paymentMethod": "cash"
+}
+
+### Payments 3. Amount zero (400)
+POST {{baseUrl}}/api/v1/payments
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "saleId": 1,
+  "amount": 0,
+  "paymentMethod": "cash"
+}
+
+### Payments 4. Get all payments (200)
+GET {{baseUrl}}/api/v1/payments
+Accept: application/json
+
+### Payments 5. Get payment by id (200)
+GET {{baseUrl}}/api/v1/payments/1
+Accept: application/json
+
+### Payments 6. Payment not found (404)
+GET {{baseUrl}}/api/v1/payments/999
+Accept: application/json
+
+
 ### ===== Customers =====
 
+### Customers 1. Create a customer (201)
+POST {{baseUrl}}/api/v1/customers
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "name": "Ana Torres",
+  "email": "ana.torres@gmail.com",
+  "phone": "+51987654321",
+  "address": "Av. Los Olivos 123"
+}
+
+### Customers 2. Duplicated email in English (409)
+POST {{baseUrl}}/api/v1/customers
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "name": "Ana T.",
+  "email": "ana.torres@gmail.com",
+  "phone": "",
+  "address": ""
+}
+
+### Customers 3. Duplicated email in Spanish (409)
+POST {{baseUrl}}/api/v1/customers
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "name": "Ana T.",
+  "email": "ana.torres@gmail.com"
+}
+
+### Customers 4. Missing name in Spanish (400)
+POST {{baseUrl}}/api/v1/customers
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "name": "",
+  "email": "sin.nombre@gmail.com"
+}
+
+### Customers 5. Customer without email (201)
+POST {{baseUrl}}/api/v1/customers
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "name": "Carlos Ruiz",
+  "email": "",
+  "phone": "+51911222333"
+}
+
+### Customers 6. Get all customers (200)
+GET {{baseUrl}}/api/v1/customers
+Accept: application/json
+
+### Customers 7. Get customer by id (200)
+GET {{baseUrl}}/api/v1/customers/1
+Accept: application/json
+
+### Customers 8. Customer not found (404)
+GET {{baseUrl}}/api/v1/customers/999
+Accept: application/json
+
+### Purchase history 1. Save sale in customer history (201)
+POST {{baseUrl}}/api/v1/purchase-history-entries
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "customerId": 1,
+  "saleId": 1,
+  "total": 191.00
+}
+
+### Purchase history 2. Customer not found (404)
+POST {{baseUrl}}/api/v1/purchase-history-entries
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "customerId": 999,
+  "saleId": 1,
+  "total": 191.00
+}
+
+### Purchase history 3. Invalid sale id (400)
+POST {{baseUrl}}/api/v1/purchase-history-entries
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "customerId": 1,
+  "saleId": 0,
+  "total": 191.00
+}
+
+### Purchase history 4. Get all entries (200)
+GET {{baseUrl}}/api/v1/purchase-history-entries
+Accept: application/json
+
+### Purchase history 5. Get entry by id (200)
+GET {{baseUrl}}/api/v1/purchase-history-entries/1
+Accept: application/json
+
+### Purchase history 6. Entry not found (404)
+GET {{baseUrl}}/api/v1/purchase-history-entries/999
+Accept: application/json
+
 ### ===== Purchasing =====
+
+### Purchasing 1. Create purchase (201)
+POST {{baseUrl}}/api/v1/purchases
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "supplierId": 1,
+  "productId": 1,
+  "quantity": 10,
+  "unitCost": 45.50
+}
+
+
+### Purchasing 2. Get all purchases (200)
+GET {{baseUrl}}/api/v1/purchases
+Accept: application/json
+
+
+### Purchasing 3. Get purchase by id (200)
+GET {{baseUrl}}/api/v1/purchases/1
+Accept: application/json
+
+
+### Purchasing 4. Purchase not found (404)
+GET {{baseUrl}}/api/v1/purchases/999
+Accept: application/json
+
+
+### Purchasing 5. Create goods receipt (201)
+POST {{baseUrl}}/api/v1/goods-receipts
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "purchaseId": 1,
+  "notes": "Goods received in good condition"
+}
+
+
+### Purchasing 6. Get all goods receipts (200)
+GET {{baseUrl}}/api/v1/goods-receipts
+Accept: application/json
+
+
+### Purchasing 7. Get goods receipt by id (200)
+GET {{baseUrl}}/api/v1/goods-receipts/1
+Accept: application/json
+
+
+### Purchasing 8. Goods receipt not found (404)
+GET {{baseUrl}}/api/v1/goods-receipts/999
+Accept: application/json
+
+
+### Purchasing 9. Delete purchase (204)
+DELETE {{baseUrl}}/api/v1/purchases/1
+Accept: application/json
+
+
+### Purchasing 10. Purchase not found after delete (404)
+GET {{baseUrl}}/api/v1/purchases/1
+Accept: application/json
+
 
 ### ===== Cash Shifts =====
 
@@ -682,3 +993,43 @@ Accept: application/json
 
 
 ### ===== Analytics =====
+
+### ===== Analytics =====
+
+### Analytics 1. Create report (201)
+POST {{baseUrl}}/api/v1/reports
+Content-Type: application/json
+Accept-Language: en
+
+{
+  "userId": 1,
+  "reportType": "Weekly Sales",
+  "fileFormat": "PDF"
+}
+
+
+### Analytics 2. Get all reports (200)
+GET {{baseUrl}}/api/v1/reports
+Accept: application/json
+
+
+### Analytics 3. Get report by id (200)
+GET {{baseUrl}}/api/v1/reports/1
+Accept: application/json
+
+
+### Analytics 4. Report not found (404)
+GET {{baseUrl}}/api/v1/reports/999
+Accept: application/json
+
+
+### Analytics 5. Invalid report in Spanish (400)
+POST {{baseUrl}}/api/v1/reports
+Content-Type: application/json
+Accept-Language: es
+
+{
+  "userId": 0,
+  "reportType": "",
+  "fileFormat": ""
+}

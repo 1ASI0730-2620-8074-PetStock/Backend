@@ -31,12 +31,14 @@ public partial class PurchaseOrder
     public DateTimeOffset OrderDate { get; private set; }
     public string Status { get; private set; }
     public ICollection<PurchaseOrderItem> Items { get; private set; }
+    
+    public bool IsReceived => Status == "Received";
 
     /// <summary>Adds a product line to the order.</summary>
     public void AddItem(int productId, int quantity, decimal unitCost)
     {
         if (quantity <= 0)
-            throw new ArgumentException("Quantity must be greater than zero.", nameof(quantity));
+            throw new ArgumentException("Quantity can't be lower than zero.", nameof(quantity));
 
         Items.Add(new PurchaseOrderItem(productId, quantity, unitCost));
     }
