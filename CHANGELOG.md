@@ -8,8 +8,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Planned
 
-- Sales, payments, customers and purchase history endpoints.
-- Purchases, goods receipts and reports endpoints.
+- Cross-context rules (a sale reduces stock, a purchase updates the history) with domain events.
+- Authentication with JWT and password hashing.
+
+## [1.0.0] - 2026-11-13
+
+### Added
+
+- Sales (including delete) and payments endpoints.
+- Customers and purchase history entries endpoints.
+- Purchases (including delete) and goods receipts endpoints.
+- Reports endpoints.
+- English and Spanish messages for the new bounded contexts.
+- Sample requests for sales, customers, purchasing and analytics in `PetStock.API.http`.
+
+### Changed
+
+- Customers query services follow the same structure as the other bounded contexts.
 
 ## [0.1.0] - 2026-11-10
 
